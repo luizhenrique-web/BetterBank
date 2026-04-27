@@ -6,7 +6,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <title>SmartBank</title>
+    <title>BetterBank</title>
 
     <!-- Bootstrap core CSS -->
     <link
@@ -18,6 +18,7 @@
 
     <!-- Custom styles for this template -->
     <link href="assets/css/stilo.css" rel="stylesheet" />
+    <link href="assets/css/login.css" rel="stylesheet" />
   </head>
 
   <body>
@@ -39,24 +40,16 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-              <a class="nav-link" href="conversor.html">
-                Conversão
-              </a>
+              <a class="nav-link" href="conversor.html"> Conversão </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">
-                Listar Saldo
-              </a>
+              <a class="nav-link" href="#"> Listar Saldo </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">
-                Transferência
-              </a>
+              <a class="nav-link" href="#"> Transferência </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="login.html">
-                Login
-              </a>
+              <a class="nav-link" href="login.html"> Login </a>
             </li>
           </ul>
         </div>
@@ -65,14 +58,43 @@
 
     <!-- Begin page content -->
     <main role="main" class="container">
-      <h1 class="mt-5">Gerenciamos moedas como ninguém</h1>
-      <p class="lead">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-      </p>
-      <p>
-        Navegue para o melhor<a href="/conversor.html"> conversor monetário </a> ja inventado pela humanidade.
-      </p>
+      <form class="form-signin">
+        <img
+          src="https://www.svgrepo.com/show/476830/bank.svg"
+          alt=""
+          width="72"
+          height="72"
+          style="margin-left: 115px;"
+        />
+        <h1 class="h3 mb-3 font-weight-bold"
+        style="margin-left: 80px;"
+        >Faça Login</h1>
+        <label for="inputEmail" class="sr-only">Email</label>
+        <input
+          type="email"
+          id="inputEmail"
+          class="form-control"
+          placeholder="seuemail@email.com"
+          required
+          autofocus
+        />
+        <label for="inputPassword" class="sr-only">Senha</label>
+        <input
+          type="password"
+          id="inputPassword"
+          class="form-control"
+          placeholder="**********"
+          required
+        />
+        <div class="checkbox mb-3">
+          <label>
+            <input type="checkbox" value="remember-me" /> Lembrar-me
+          </label>
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">
+          Entrar
+        </button>
+      </form>
     </main>
 
     <footer class="footer">
