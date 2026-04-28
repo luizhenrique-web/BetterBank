@@ -6,7 +6,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <title>BetterBank</title>
+    <title>SmartBank</title>
 
     <!-- Bootstrap core CSS -->
     <link
@@ -17,8 +17,8 @@
     />
 
     <!-- Custom styles for this template -->
-    <link href="assets/css/stilo.css" rel="stylesheet" />
-    <link href="assets/css/login.css" rel="stylesheet" />
+     <link href="assets/css/stilo.css" rel="stylesheet" />
+    <link href="assets/css/transferencia.css" rel="stylesheet" />
   </head>
 
   <body>
@@ -40,16 +40,24 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-              <a class="nav-link" href="conversor.html"> Conversão </a>
+              <a class="nav-link" href="conversor.html">
+                Conversão
+              </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="listar.html"> Listar Saldo </a>
+              <a class="nav-link" href="listar.html">
+                Listar Saldo
+              </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="transferencia.html"> Transferência </a>
+              <a class="nav-link" href="transferencia.html">
+                Transferência
+              </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="login.html"> Login </a>
+              <a class="nav-link" href="login.html">
+                Login
+              </a>
             </li>
           </ul>
         </div>
@@ -57,44 +65,22 @@
     </header>
 
     <!-- Begin page content -->
-    <main role="main" class="container">
-      <form class="form-signin">
-        <img
-          src="https://www.svgrepo.com/show/476830/bank.svg"
-          alt=""
-          width="72"
-          height="72"
-          style="margin-left: 115px;"
-        />
-        <h1 class="h3 mb-3 font-weight-bold"
-        style="margin-left: 80px;"
-        >Faça Login</h1>
-        <label for="inputEmail" class="sr-only">Email</label>
-        <input
-          type="email"
-          id="inputEmail"
-          class="form-control"
-          placeholder="seuemail@email.com"
-          required
-          autofocus
-        />
-        <label for="inputPassword" class="sr-only">Senha</label>
-        <input
-          type="password"
-          id="inputPassword"
-          class="form-control"
-          placeholder="**********"
-          required
-        />
-        <div class="checkbox mb-3">
-          <label>
-            <input type="checkbox" value="remember-me" /> Lembrar-me
-          </label>
-        </div>
-        <button class="btn btn-lg btn-primary btn-block" type="submit">
-          Entrar
-        </button>
-      </form>
+    <main role="main" class="container d-flex justify-content-center align-items-center" style="min-height: 90vh;">
+     <div class="card transferencia-card p-4">
+        <h4 class="text-center mb-4">Transferência</h4>
+        <form id="transferencia-form">
+            <div class="form-group">
+                <label for="conta destino">Conta Destino</label>
+                <input type="text" class="form-control" id="destinatario" placeholder="Digite a conta de destino" required>
+            </div>
+               <div class="form-group">
+                <label for="valor">Valor</label>
+                <input type="number" class="form-control" id="valor" placeholder="Digite o valor a transferir" required>
+               </div>
+             <button type="submit" class="btn btn-dark btn-block">Transferir</button>
+        </form>
+        <div id="mensagem" class="mt-3 text-center"></div>
+     </div>
     </main>
 
     <footer class="footer">
@@ -121,5 +107,6 @@
       integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
       crossorigin="anonymous"
     ></script>
+    <script src="js/transferencia.js"></script>
   </body>
 </html>
