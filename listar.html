@@ -17,7 +17,8 @@
     />
 
     <!-- Custom styles for this template -->
-    <link href="assets/css/stilo.css" rel="stylesheet" />
+     <link href="assets/css/stilo.css" rel="stylesheet" />
+    <link href="assets/css/saldo.css" rel="stylesheet" />
   </head>
 
   <body>
@@ -64,15 +65,18 @@
     </header>
 
     <!-- Begin page content -->
-    <main role="main" class="container">
-      <h1 class="mt-5">Gerenciamos moedas como ninguém</h1>
-      <p class="lead">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-      </p>
-      <p>
-        Navegue para o melhor<a href="/conversor.html"> conversor monetário </a> ja inventado pela humanidade.
-      </p>
+    <main role="main" class="container d-flex justify-content-center align-items-center" style="min-height: 90vh;">
+     <div class="card saldo-card p-4">
+       <h4 class="text-center mb-4">Saldo da Conta</h4>
+         <div class="saldo-valor text-center mb-3">
+            R$ <span id="saldo">0.00</span>
+         </div>
+         <hr/>
+         <h5 class="mt-3">Histórico</h5>
+         <ul class="list-group mt-2" id="historico">
+            <!--JS VAI PREENCHER DINAMICAMENTE-->
+         </ul>
+     </div>
     </main>
 
     <footer class="footer">
@@ -99,6 +103,6 @@
       integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
       crossorigin="anonymous"
     ></script>
-    <script src="js/conversor.js"></script>
+    <script src="js/listar.js"></script>
   </body>
 </html>
